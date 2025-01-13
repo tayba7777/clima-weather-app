@@ -15,7 +15,7 @@ function refreshWeather(response) {
     humidityElement.innerHTML = `${response.data.temperature.humidity}`;
     windSpeedElement.innerHTML = `${response.data.wind.speed} km/h`;
     temperatureElement.innerHTML = Math.round(temperature);
-    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class= "weather-app-icon" />`;
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
   }
 
   function formatDate(date) {
@@ -49,3 +49,14 @@ function refreshWeather(response) {
   
     axios.get(apiUrl).then(refreshWeather);
   }  
+
+  function handleSearchSubmit(event) {
+    event.preventDefault();
+    let searchInput = document.querySelector("#search-form-input");
+    searchCity(searchInput.value);
+  }
+
+  let searchInputElement = document.querySelector("#search-form");
+  searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+  searchCity("paris");
