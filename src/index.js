@@ -49,4 +49,5 @@ function refreshWeather(response) {
   
     axios.get(apiUrl).then(refreshWeather);
   }
+  searchCity(paris)
   
