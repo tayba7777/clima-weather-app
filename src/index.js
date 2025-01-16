@@ -56,5 +56,5 @@ function refreshWeather(response) {
     searchCity(searchInput.value);
   }
 
-  let searchInputElement = document.querySelector("#search-form");
+  let searchFormElement = document.querySelector("#search-form");
   searchFormElement.addEventListener("submit", handleSearchSubmit);
