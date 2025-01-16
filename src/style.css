@@ -1,7 +1,7 @@
 
 
 body {
-    background-color: blue;
+    background-color: #f9f7fe;
     font-family: "Roboto", serif;
 }
 
@@ -12,6 +12,10 @@ margin: 45px auto;
 padding: 30px;
 border-radius: 16px;
 box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
+
+.search-form-input{
+    background-color: blueviolet;
 }
 
 header {
